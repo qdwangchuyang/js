@@ -1,0 +1,56 @@
+DOM:document object model
+DOM是W3C的标准，是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容，结构和样式。其实就是对网页进行增删改查的
+操作。
+常用的DOM操作：
+1，查找结点
+按照ID属性，精确查找一个元素对象
+var elem=document.getElementById("id")              // 效率很高
+注意：getElementById只能用在document上，只能用于精确查找一个元素，但不是所有的元素都有id
+   
+
+2，按标签名查找
+var elems=parent.getElementsByTagName("tag");
+查找指定parent节点下的所有标签为tag的子代节点
+
+强调：1，可用在任意父元素上
+      2，不仅查直接子节点，而且查所有子代节点
+      3，返回一个动态集合，即使只找到一个元素，也返回集合，必须用[0],取出唯一元素
+      
+3，通过name属性查找
+document.get ElementsByName("name属性值“”)
+可以返回DOM树种具有指定name属性值的所有子元素集合。
+
+4，通过class属性查找
+查找父元素下指定class属性的元素
+
+var elems=parent.getElementsByClassName("class");
+
+5,通过css选择器查找
+5.1
+只找一个元素 
+var elem=parent.querySelector("selector")
+强调：selector支持一切css中选择器
+      如果选择器匹配的有多个，只返回第一个
+5.2
+找多个：
+var elems=parent.querySelectorAll("selector")
+强调：selector AP返回的是非动态集合
+
+-------------------------------------------------------
+DOM修改
+dom标准：核心dom，htmldom
+核心dom：可操作一切结构化文档的API,包括html和xml，功能强大，但繁琐
+htmldom：专门操作html文档的简化版domapi，仅对常用的复杂的api进行了简化，简单，但功能较少。
+----------------------------------------------------------------
+dom添加
+
+
+
+
+
+
+
+
+      
+      
+      
