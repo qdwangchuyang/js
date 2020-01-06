@@ -1,0 +1,46 @@
+对象定义
+对象是JS中的一种复合数据类型，它可以把多个数据集中在一个变量中，并且给其中的每个数据起名字
+或者说，对象是一个属性集合，每个属性都有自己的名字和值
+
+创建对象：
+方法1 var o=new Object();
+方法2 var circle={x:0,y:0,radius:2};        //赋值
+
+运算符： .
+举例
+var book=new Object();
+book.title="html秘籍"；               //跟数组类似，直接复制，就创建了title属性
+book.translator="李晓峰"；
+book.chapter1=new Object();
+book.chapter1.title="html简介"
+
+删除对象属性
+
+delete book.chapter1;
+book.chapter1=null;
+
+遍历所有属性
+
+for(var x in o)
+举例
+var o=new Object();
+o.name="John Mike";
+o.age=30;
+o.salary=300;
+for(var x in o){
+ alert(o[x]);
+ }
+ 
+ 
+ 构造方法/构造函数
+ 
+ function Rect(w,h){
+  this.width=w;
+  this.height=h;
+  this.area=function()
+  {return this.width*this.height;
+  };
+  }
+  var r=new Rect(5,10);
+      alert(r.area());
+      
