@@ -1,0 +1,30 @@
+window
+浏览器的全局变量是 window
+所有全局的变量实际上是window的成员
+var answer=12;
+alert(window.answer);
+
+document
+window.document表示浏览器窗口中的html页面
+document.write()将内容写入页面
+页面中的元素就是document里的成员
+for(x in document)
+ document.write(x+"<br/>");
+ 
+ document model
+ element html                       //element可以访问，读取，修改
+ element head
+ element title
+ element body
+ 
+ 外部JavaScript文件
+ 
+ body事件
+ onLoad
+ onUnload
+ 
+ 简单对话框
+ alert()
+ confirm()
+ prompt()
+ 
