@@ -1,0 +1,16 @@
+webkit内核，V8引擎
+chrome,safari,opera
+
+Gecko
+firefox
+
+Trident
+IE
+----------------------------------------------
+F12控制台
+ELEMENTS:查看结构样式，可以修改这些内容
+console：查看输出结果和报错信息
+sources：查看项目源码
+network：查看当前网页所有资源的请求信息，包括和服务器传输的http报文信息，加载时间等
+application：查看当前网站的数据存储和资源文件
+
