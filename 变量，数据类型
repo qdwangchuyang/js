@@ -1,0 +1,17 @@
+1，严格区分大小写
+2，let const 变量，常量
+
+基本数据类型：number string boolean null undefined
+             number:常规数字，NaN（not a number），
+             NaN和任何值，包括自己，都不相等；
+             isNaN,检测一个值是否为非有效数字，如果不是有效数字返回true,反之是有效数字返回false
+             Number（value）将字符串转换为数字，只要字符串中包含任意一个非有效数字字符，结果都是NaN，空字符串会变为数字零
+             console.log(Number('12.5px'));      //NaN
+             cconsol.log(Number(''));            // 0
+             Number（）将布尔转换为数字
+             console.log(number(false));        //0
+             console.log(number(true));         //1
+
+
+
+引用数据类型：对象数据类型：普通对象，数组对象，正则对象
