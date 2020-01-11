@@ -4,12 +4,13 @@
 
 创建对象：
 方法1 var o=new Object();
-方法2 var circle={x:0,y:0,radius:2};        //赋值
+方法2 var circle={x:0,y:0,radius:2};        //赋值，任何一个对象都是由零到多组键值对组成
 
 运算符： .
 举例
 var book=new Object();
-book.title="html秘籍"；               //跟数组类似，直接复制，就创建了title属性
+
+book.title="html秘籍"；               //跟数组类似，直接赋值，就创建了title属性
 book.translator="李晓峰"；
 book.chapter1=new Object();
 book.chapter1.title="html简介"
