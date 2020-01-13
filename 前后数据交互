@@ -1,0 +1,4 @@
+服务器分为：web服务器（html），数据服务器，资源服务器（图片）
+          用来进行前后端数据交互的主要是数据服务器
+          基于ajax（jsonp，cross，webpack proxy）
+          基于fetch
