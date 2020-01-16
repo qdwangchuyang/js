@@ -114,3 +114,15 @@
              consolo.log(person.sex);             // undefined
              如果当前属性名是数字，则不能使用点的方式获得属性值
              consolo.log(person.1)   //语法错误
+
+            数据类型检测：
+            
+            typeof[val]:用来检测数据类型的运算符
+                        基于typeof检测出来的结果：1，首先是一个字符串 2，字符串中包含对应的类型
+                        局限性：1，typeof Null：object 但是null并不是对象
+                                2，typeof 无法分辨出当前值是普通对象还是数组对象，所以只要是对象数据类型，返回结果都是object
+            instanceof：用来检测当前实例是否属于某个类
+            constructor：用于构造函数监测数据类型
+            Object.prototype.toString.call():检测数据类型最好的方法
+     
+
