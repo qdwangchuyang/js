@@ -108,12 +108,12 @@
              height:'181cm',
              1：100
              };
-             consolo.log(person.name);
-             consolo.log(person['age']);             //属性名都是字符串，不过是默认的，所以没有加引号
+             console.log(person.name);
+             console.log(person['age']);             //属性名都是字符串，不过是默认的，所以没有加引号
              如果当前属性名不存在，默认的属性值是undefined
-             consolo.log(person.sex);             // undefined
+             console.log(person.sex);             // undefined
              如果当前属性名是数字，则不能使用点的方式获得属性值
-             consolo.log(person.1)   //语法错误
+             console.log(person.1)   //语法错误
 
             数据类型检测：
             
