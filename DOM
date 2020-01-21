@@ -17,23 +17,23 @@ var elems=parent.getElementsByTagName("tag");
       3，返回一个动态集合，即使只找到一个元素，也返回集合，必须用[0],取出唯一元素
       
 3，通过name属性查找
-document.get ElementsByName("name属性值“”)
+document.get ElementsByName("name属性值“”)                //ie中支队表单元素的name起作用
 可以返回DOM树种具有指定name属性值的所有子元素集合。
 
 4，通过class属性查找
 查找父元素下指定class属性的元素
 
-var elems=parent.getElementsByClassName("class");
+var elems=parent.getElementsByClassName("class"); //ie6-8不兼容
 
 5,通过css选择器查找
 5.1
 只找一个元素 
-var elem=parent.querySelector("selector")
+var elem=parent.querySelector("selector")       //ie6-8不兼容
 强调：selector支持一切css中选择器
       如果选择器匹配的有多个，只返回第一个
 5.2
 找多个：
-var elems=parent.querySelectorAll("selector")
+var elems=parent.querySelectorAll("selector")   //ie6-8不兼容
 强调：selector AP返回的是非动态集合
 
 -------------------------------------------------------
@@ -43,6 +43,51 @@ dom标准：核心dom，htmldom
 htmldom：专门操作html文档的简化版domapi，仅对常用的复杂的api进行了简化，简单，但功能较少。
 ----------------------------------------------------------------
 dom添加
+document.createElement([TAG-NAME])
+document.createeTextNode([TEXT CONTENT])
+字符串拼接（模板字符串），然后基于innerHTML/innerText存放到容器中
+
+[PARENT].appendchild([NEW-ELEMENT])
+[PARENT].insertBefor([ELEMENT],[NEW-ELEMENT])
+
+[ELEMENT].cloneNode([TRUE/FALSE])
+[PARENT].removechild([ELEMENT])
+
+[ELEMENT].xxx=xxx;
+console.log([ELEMENT].xxx);
+
+[ELMENT].setAttribute('xxx',xxx)
+console.log([ELEMENT].getAttribute('xxx'));
+[ELMENT].removeAttribute('xxx');
+=======================================================
+获取元素样式和操作样式
+//修改元素样式
+[ELEMENT].style.xxx=xxx;              //修改和设置它的行内样式
+[ELEMENT].className=xxx;              //设置样式类
+
+============================
+获取元素样式
+let w=box.style.width       //缺点：获取的是当前元素写在行内上的样式，如果该样式没有写在行内，无法获取
+
+JS盒子模型属性
+基于一些属性和方法，让我们能够获取到当前元素的样式信息，例如clientWidth,offsetWidth等
+
+client：width/height top/left
+offset:width/height top/left parent
+scroll:width/height top/left
+
+方法：window.getComuptedStyle([ELEMENT],[伪类])/[ELEMENT].currentStyle
+
+let box=document.getElementById('box');
+//获取盒子可视区域的宽（内容宽度+左右padding）高（内容高度+上下padding）
+box.clientWidth
+box.clientHeight                 //1，内容溢出与否对它没有影响
+                                   2，获取的结果是没有单位的（其余的盒模型属性也是）
+                                   3，
+
+
+
+
 
 
 
