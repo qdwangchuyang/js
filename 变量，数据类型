@@ -125,4 +125,4 @@
             constructor：用于构造函数监测数据类型
             Object.prototype.toString.call():检测数据类型最好的方法
      
-
+ES6中增加 symbol 唯一的值
