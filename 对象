@@ -4,7 +4,42 @@
 
 创建对象：
 方法1 var o=new Object();
-方法2 var circle={x:0,y:0,radius:2};        //赋值，任何一个对象都是由零到多组键值对组成
+
+方法2 var circle={
+radius：1，
+x:1,
+y:1
+},
+draw:function (){
+console.log('draw');
+}
+};        //对象可以包括多个属性键值对，也可以包括方法（draw）
+
+
+方法3 工厂函数，factory
+function createCircle(radius){
+  return {
+   radius,
+   draw: function(){
+     console.log('draw');
+     }
+    };
+   }
+   const circle = createCircle(1);
+   circle.draw();
+   
+   
+方法4 构造函数,constructor
+function Circle(radius){
+  this.radius = radius;
+  this.draw = function(){
+  console.log(‘draw’）；
+  }
+ }
+ const another = new Circle(1);
+  
+  
+  
 
 运算符： .
 举例
